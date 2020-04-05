@@ -1,0 +1,20 @@
+{
+  "name": "icount",
+  "version": "1.0.0",
+  "description": "count various stats from projects",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src -d lib"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/plugin-syntax-jsx": "^7.8.3",
+    "@babel/preset-env": "^7.9.0",
+    "@babel/preset-react": "^7.9.4",
+    "glob": "^7.1.6"
+  }
+}

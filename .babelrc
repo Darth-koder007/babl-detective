@@ -1,0 +1,12 @@
+// {
+//   "presets": ["@babel/preset-env", "@babel/preset-react"],
+//   "plugins": [
+//     // [
+//     //   "./babel-plugin-import.js",
+//     //   { "importName": ["ireact-components", "chromos"] }
+//     // ],
+//     // "./babel-plugin-native-element.js",
+//     // "./babel-plugin-classname.js",
+//     "./babel-plugin-styleprop.js"
+//   ]
+// }
