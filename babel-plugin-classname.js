@@ -11,8 +11,7 @@ module.exports = function () {
           path.node.value.type === "StringLiteral"
         ) {
           const value = path.node.value.value;
-          state.opts.cb(" from classname plugin");
-          console.log("className", value);
+          state.opts.cb(value);
         }
       },
     },

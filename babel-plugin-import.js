@@ -14,12 +14,7 @@ module.exports = function () {
             for (let specifier in specifiers) {
               if (Object.prototype.hasOwnProperty.call(specifiers, specifier)) {
                 if (specifiers[specifier].type === "ImportSpecifier") {
-                  state.opts.cb("from import plugin");
-                  console.log(
-                    value,
-                    " : ",
-                    specifiers[specifier].imported.name
-                  );
+                  state.opts.cb(value, specifiers[specifier].imported.name);
                 }
               }
             }

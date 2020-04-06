@@ -1,5 +1,4 @@
 module.exports = function () {
-  console.log("arguments", arguments);
   return {
     visitor: {
       JSXAttribute(path, state) {
@@ -11,8 +10,7 @@ module.exports = function () {
           (path.node.name.name === "style" ||
             path.node.name.name === "className")
         ) {
-          state.opts.cb(" from styleprop plugin");
-          const type = path.parent.type;
+          state.opts.cb();
         }
       },
     },

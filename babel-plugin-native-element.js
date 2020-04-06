@@ -12,8 +12,7 @@ module.exports = function () {
           var first = name.charAt(0);
           if (first === first.toLowerCase()) {
             // first character is a lowercase letter
-            state.opts.cb(" from native element plugin");
-            console.log("nativeEl", path.node.openingElement.name.name);
+            state.opts.cb(name);
           }
         }
       },
