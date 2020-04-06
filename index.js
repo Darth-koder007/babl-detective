@@ -13,7 +13,7 @@ glob("src/*.js", {}, function (err, files) {
       plugins: [
         "@babel/plugin-syntax-jsx",
         [
-          "./babel-plugin-import.js",
+          "./plugins/babel-plugin-import.js",
           {
             importName: ["ireact-components", "chromos"],
             cb: (val, name) => {
@@ -22,7 +22,7 @@ glob("src/*.js", {}, function (err, files) {
           },
         ],
         [
-          "./babel-plugin-native-element.js",
+          "./plugins/babel-plugin-native-element.js",
           {
             cb: (el) => {
               Store.updateNativeElementList("proj1", el);
@@ -30,7 +30,7 @@ glob("src/*.js", {}, function (err, files) {
           },
         ],
         [
-          "./babel-plugin-classname.js",
+          "./plugins/babel-plugin-classname.js",
           {
             cb: (className) => {
               Store.updateClassNameList("proj1", className);
@@ -38,7 +38,7 @@ glob("src/*.js", {}, function (err, files) {
           },
         ],
         [
-          "./babel-plugin-styleprop.js",
+          "./plugins/babel-plugin-styleprop.js",
           {
             cb: () => {
               Store.updateStyleNamePropCount("proj1");

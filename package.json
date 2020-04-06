@@ -1,6 +1,6 @@
 {
   "name": "icount",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "count various stats from projects",
   "main": "index.js",
   "scripts": {
