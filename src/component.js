@@ -9,7 +9,7 @@ import { resetShowAllCollections } from "../../actions/audCollections/audCollect
 const CollectionsListWrapper = ({
   onValueChange,
   showAllCollections,
-  dispatch
+  dispatch,
 }) => {
   const dropdownRef = createRef();
   const [key, setKey] = useState(Date.now());
@@ -32,13 +32,13 @@ const CollectionsListWrapper = ({
     const showCollectionsFn = () => {
       ({
         current: {
-          refs: { inlinePopup }
-        }
+          refs: { inlinePopup },
+        },
       } = dropdownRef);
 
       window.scrollTo({
         top: 0,
-        behavior: "smooth"
+        behavior: "smooth",
       });
 
       fn = () => {
@@ -56,7 +56,7 @@ const CollectionsListWrapper = ({
       showCollectionsFn();
     }
 
-    return function() {
+    return function () {
       window.removeEventListener("scroll", fn);
     };
   }, [showAllCollections, dropdownRef]);
@@ -82,7 +82,7 @@ const CollectionsListWrapper = ({
           className="classRXDropDown"
         />
       </RXElementGroup>
-      <div className="classDiv">
+      <div className="classDiv" style={{ width: "100%" }}>
         hello
         <p className={classNamePara}>world</p>
       </div>

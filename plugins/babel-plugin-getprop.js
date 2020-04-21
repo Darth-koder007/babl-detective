@@ -7,10 +7,9 @@ module.exports = function () {
           path.node.name &&
           path.node.name.type &&
           path.node.name.type === "JSXIdentifier" &&
-          (path.node.name.name === "style" ||
-            path.node.name.name === "className")
+          state.opts.propList.includes(path.node.name.name)
         ) {
-          state.opts.cb();
+          state.opts.cb(path.node.name.name);
         }
       },
     },
