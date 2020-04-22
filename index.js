@@ -4,7 +4,7 @@ const fs = require("fs");
 const Store = require("./store");
 const argv = require("yargs").argv;
 const sourcePath = argv.src;
-const outputFileName = argv.src + "-output" || "output";
+const outputFileName = argv.outputFileName + "-output" || "output";
 const postcss = require("postcss");
 const postcssSass = require("postcss-sass");
 const postcssScss = require("postcss-scss");
@@ -25,6 +25,7 @@ glob(
           sourceType: "module",
           plugins: [
             "@babel/plugin-proposal-class-properties",
+            "@babel/plugin-proposal-export-default-from",
             [
               "./plugins/babel-plugin-import.js",
               {
