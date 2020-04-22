@@ -10,6 +10,7 @@ class Store {
         importCollection: {},
         nativeElementList: {},
         classNameList: {},
+        selectorList: {},
       },
     };
   }
@@ -83,8 +84,29 @@ class Store {
     }
   }
 
+  updateSelectorList(projectName, selectorName) {
+    if (
+      Object.prototype.hasOwnProperty.call(
+        this.store[projectName].selectorList,
+        selectorName
+      )
+    ) {
+      const value = this.store[projectName].selectorList[selectorName];
+      this.store[projectName].selectorList[selectorName] = value + 1;
+    } else {
+      this.store[projectName].selectorList[selectorName] = 1;
+    }
+    console.log("called");
+  }
+
   getStore() {
+    console.log("called getStore");
+
     return this.store;
+  }
+
+  resetStore() {
+    this.store = {};
   }
 }
 

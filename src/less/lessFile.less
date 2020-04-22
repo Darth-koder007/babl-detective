@@ -1,0 +1,208 @@
+@import "../../variable.less";
+
+.collections-details-wrapper {
+  .collections-details-container {
+    .collections-details-img-container {
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .collection-details-data {
+      width: 1200px;
+      margin: 0 auto;
+      background-color: @container-bg;
+      box-shadow: 0 22px 41px 0 rgba(0, 0, 0, 0.07);
+      position: relative;
+      left: 0;
+      right: 0;
+      margin-top: -125px;
+      border-radius: 8px;
+      margin-bottom: 50px;
+
+      .collection-details-data-header {
+        min-height: 440px;
+        background-color: @blue-collection;
+        color: @container-bg;
+        padding: 52px 62px;
+        display: flex;
+        justify-content: space-between;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+
+        .collection-details-name-container {
+          .collection-header-text {
+            opacity: 0.6;
+            margin-bottom: 10px;
+            .myFont(@font-regular, 24px);
+          }
+
+          .collection-name-text {
+            margin-bottom: 14px;
+            .myFont(@font-regular, 48px, inherit, 600);
+          }
+
+          .collection-description-text {
+            .myFont(@font-firasanslight, 18px, @container-bg);
+
+            line-height: 1.33;
+            letter-spacing: -0.13px;
+            width: 696px;
+
+            .read-more {
+              font-family: @font-firasanssemibold;
+              cursor: pointer;
+            }
+          }
+
+          .more-desc {
+            padding-bottom: 155px;
+          }
+        }
+
+        .collection-details-reach-container {
+          .reach-count-collections {
+            margin-bottom: 16px;
+
+            .reach-count {
+              .myFont(@font-regular, 38px, @container-bg, 500);
+            }
+
+            .reach-text {
+              .myFont(@font-firasans, 20px, @container-bg, 500);
+
+              vertical-align: 10px;
+              margin-left: 4px;
+            }
+          }
+
+          .pricing-collections {
+            .pricing-count {
+              .myFont(@font-regular, 38px, @container-bg, 500);
+            }
+
+            .pricing-type {
+              vertical-align: 10px;
+              .myFont(@font-firasans, 20px, @container-bg, 500);
+
+              margin-left: 4px;
+            }
+          }
+        }
+      }
+
+      .collection-segments-container {
+        padding-bottom: 52px;
+        background-color: transparent;
+        position: relative;
+        width: 1200px;
+        padding-right: 51px;
+        padding-left: 51px;
+        border-radius: 8px;
+        margin-top: -170px;
+
+        .collection-segments {
+          &:first-child {
+            background-color: @container-bg;
+          }
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+
+          &:hover {
+            box-shadow: 0 12px 16px @container-box-shadow;
+            transition: 0.3s all;
+          }
+
+          position: relative;
+          display: flex;
+          height: 269px;
+          width: 1097px;
+          margin-bottom: 25px;
+          border-radius: 4px;
+          box-shadow: 0 3px 8px 0 rgba(194, 194, 194, 0.85);
+          padding: 30px;
+          cursor: pointer;
+
+          .collection-segments-img {
+            width: 320px;
+            min-width: 320px;
+            height: 210px;
+            margin-right: 40px;
+
+            img {
+              width: 100%;
+              height: 210px;
+              object-fit: cover;
+            }
+          }
+
+          .collection-segments-details-container {
+            .collection-segments-details {
+              margin-bottom: 38px;
+
+              .collection-segments-name {
+                .myFont(@font-header, 28px, @color-fg-body, 600);
+
+                margin-bottom: 10px;
+              }
+
+              .collection-segments-desc {
+                .myFont(@font-firasans, 18px, @color-fg-body);
+
+                line-height: normal;
+                letter-spacing: -0.13px;
+              }
+            }
+
+            .collection-segments-price-container {
+              width: 300px;
+              display: flex;
+
+              .collection-segments-reach {
+                width: 150px;
+
+                .reach-count {
+                  .myFont(@font-header, 28px, @color-fg-body, 600);
+
+                  margin-bottom: 10px;
+                }
+
+                .reach-text {
+                  .myFont(@font-lite, 18px, @color-fg-body);
+
+                  line-height: normal;
+                  letter-spacing: -0.13px;
+                }
+              }
+
+              .collection-segments-price {
+                border-left: solid 1px rgba(151, 151, 151, 0.3);
+                min-width: 150px;
+                text-align: end;
+                padding-left: 50px;
+
+                .price {
+                  .myFont(@font-header, 28px, @color-fg-body, 600);
+
+                  text-align: start;
+                  margin-bottom: 10px;
+                }
+
+                .price-type {
+                  .myFont(@font-lite, 18px, @color-fg-body);
+
+                  line-height: normal;
+                  letter-spacing: -0.13px;
+                  text-align: start;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
