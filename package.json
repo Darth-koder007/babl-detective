@@ -1,7 +1,7 @@
 {
   "name": "icount",
-  "version": "1.0.1",
-  "description": "count various stats from projects",
+  "version": "1.1.0",
+  "description": "Design System Metrics",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -17,6 +17,10 @@
     "@babel/preset-react": "^7.9.4",
     "@babel/preset-typescript": "^7.9.0",
     "glob": "^7.1.6",
+    "postcss": "^7.0.27",
+    "postcss-less": "^3.1.4",
+    "postcss-sass": "^0.4.4",
+    "postcss-scss": "^2.0.0",
     "yargs": "^15.3.1"
   }
 }
