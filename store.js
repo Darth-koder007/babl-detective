@@ -96,12 +96,9 @@ class Store {
     } else {
       this.store[projectName].selectorList[selectorName] = 1;
     }
-    console.log("called");
   }
 
   getStore() {
-    console.log("called getStore");
-
     return this.store;
   }
 
